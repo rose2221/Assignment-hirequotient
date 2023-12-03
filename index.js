@@ -111,18 +111,7 @@ function toggleEditSave(userId) {
             field.innerText = newValue;
             let x = field.attributes[1].nodeValue.toString();
             console.log(x);
-            //console.log(displayedUsers[userId].field);
-            //c1.innerText = newValue
-            // console.log(field == "name");
-            // const fieldName = field.dataset.field;
-            // console.log('fieldName:', fieldName);
-
-            // const userId = row.parentElement.dataset.id;
-            // console.log('userId:', userId);
-            // console.log('displayedUsers[userId]:', displayedUsers[userId]);
-
-            // const extractedField = displayedUsers[userId][fieldName];
-            // console.log('extractedField:', extractedField);
+            
             if (x == "name") {
                 displayedUsers[userId - 1].name = newValue;
             }
@@ -132,7 +121,7 @@ function toggleEditSave(userId) {
             if (x == "role") {
                 displayedUsers[userId - 1].role = newValue;
             }
-            //console.log(displayedUsers[userId].role);
+            
             rtable(displayedUsers);
             rpagination(displayedUsers);
 
@@ -142,17 +131,9 @@ function toggleEditSave(userId) {
 
 
 
-        // let x = `.edit-${field.dataset.field}`;
-
-        // if (userId !== -1) {
-        //     displayedUsers[userId].x = newValue;
-        // }
-        // console.log(displayedUsers[userId].field.dataset.field);
-
-        //console.log(displayedUsers[1].name);
+        
     }
-    // rtable(displayedUsers);
-    // rpagination(displayedUsers);
+ 
     else {
 
         row.classList.add("editing");
@@ -163,16 +144,7 @@ function toggleEditSave(userId) {
             const currentValue = field.innerText;
             field.innerHTML = `<input type="text" value="${currentValue}" class="edit-${field.dataset.field}" />`;
         });
-        // rtable(displayedUsers);
-        // rpagination(displayedUsers);
-        //const userIndex = displayedUsers.findIndex((user) => user.id === userId);
-        //console.log(userId);
-        // if (userId !== -1) {
-        //     displayedUsers[userId].field.dataset.field = field.querySelector(`.edit-${field.dataset.field}`).value;
-        // }
-        // console.log(displayedUsers[userId].field.dataset.field);
-        // rtable(displayedUsers);
-        // rpagination(displayedUsers);
+      
 
     }
 }
