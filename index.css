@@ -1,0 +1,351 @@
+        @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Croissant+One&family=Hedvig+Letters+Serif:opsz@12..24&family=Libre+Baskerville:wght@700&family=Lora&family=PT+Sans&family=Roboto+Slab&family=Skranji&family=Young+Serif&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Croissant+One&family=Hedvig+Letters+Serif:opsz@12..24&family=Libre+Baskerville:wght@700&family=Lora&family=Noto+Sans:wght@900&family=PT+Sans&family=Playfair+Display:wght@900&family=Roboto+Slab&family=Skranji&family=Young+Serif&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            background-color: #0a0003;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        main.table {
+            width: 82vw;
+            height: 95vh;
+            background-color: rgba(66, 66, 66, 0.96);
+            backdrop-filter: blur(7px);
+            box-shadow: 0 .4rem .8rem #0005;
+            border-radius: .8rem;
+            overflow: hidden;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .table_header h1 {
+            margin-left: 1rem;
+            color: rgb(255, 19, 107);
+            font-family: Noto Sans;
+        }
+        
+        .table_header {
+            width: 100%;
+            height: 8%;
+            padding: .8rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .checkbox-container {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 2rem;
+            background-color: #fff5;
+            border-radius: 2rem;
+            padding: 0.3rem .8rem;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .checkbox-container h2 {
+            font-size: small;
+            margin-right: 3px;
+            font-family: Libre Baskerville;
+        }
+        /* #searchInput {
+    height: 0.5rem;
+} */
+        
+        .table_header .input-group {
+            width: 35%;
+            height: 100%;
+            background-color: #fff5;
+            padding: 0.3rem .8rem;
+            border-radius: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .2s;
+            /* border-width: 0; */
+            font-family: Libre Baskerville;
+        }
+        
+        .table_header .input-group:hover {
+            width: 40%;
+            height: 100%;
+            background-color: #fff8;
+            /* box-shadow: 0 .1rem .4rem #0002; */
+            font-family: Libre Baskerville;
+            /* border-width: 0; */
+        }
+        
+        #searchButton {
+            background-color: transparent;
+            background-color: #8f888854;
+            border-width: 0;
+            background-image: conic-gradient;
+            backface-visibility: unset;
+            /* background-color: #fff5; */
+            border-width: 0;
+            border-radius: 50px;
+        }
+        
+        #clearButton {
+            background-color: #8f888854;
+            border-width: 0;
+            background-image: conic-gradient;
+            backface-visibility: unset;
+            /* background-color: #fff5; */
+            border-width: 0;
+            border-radius: 50px;
+        }
+        
+        #clearButton:hover {
+            background-color: rgba(237, 229, 229, 0.533);
+            border-width: 0;
+        }
+        
+        #searchButton:hover {
+            background-color: rgba(237, 229, 229, 0.533);
+            border-width: 0;
+        }
+        
+        .table_header .input-group img {
+            width: 1.2rem;
+            height: 1.2rem;
+            /* background-color: #fff5; */
+            /* border-radius: 50%; */
+            /* background-color: transparent; */
+            border-width: 0;
+            mix-blend-mode: multiply;
+        }
+        
+        .table_header .input-group input {
+            width: 100%;
+            padding: 0 .5rem 0 .3rem;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-family: Libre Baskerville;
+        }
+        
+        .table_body {
+            width: 95%;
+            max-height: 90vh;
+            overflow: auto;
+            background-color: rgba(3, 3, 3, 0.733);
+            margin: .8rem auto;
+            border-radius: .6rem;
+            overflow: overlay;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        table tbody tr:nth-child(even) {
+            background-color: rgba(53, 52, 52, 0.73);
+            border-collapse: collapse;
+            /* padding: 0.45rem; */
+            text-align: left;
+            max-height: 0.23rem;
+            overflow: scroll;
+        }
+        
+        table tbody tr:nth-child(odd) {
+            background-color: rgb(35, 33, 33);
+            border-collapse: collapse;
+            /* padding: 0.45rem; */
+            text-align: left;
+            max-height: 2px;
+            overflow: scroll;
+        }
+        
+        table,
+        table th,
+        table td {
+            border-collapse: collapse;
+            padding: 0.5rem;
+            text-align: left;
+            /* background-color: black; */
+            /* background-color: rgb(35, 33, 33); */
+            /* color: rgb(255, 19, 107); */
+        }
+        
+        table td {
+            color: white;
+        }
+        
+        table th {
+            color: rgb(255, 19, 107);
+            font-family: Libre Baskerville;
+        }
+        
+        table thead th {
+            height: 10px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: black;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+        
+        table tbody tr:nth-child(even) {
+            background-color: rgba(53, 52, 52, 0.73)
+        }
+        
+        table tbody tr {
+            --delay: .1s;
+            transition: .5s ease-in-out var(--delay), background-color 0s;
+        }
+        
+        table tbody tr:hover {
+            background-color: #fff6 !important;
+        }
+        
+        .edit {
+            padding: .4rem 0;
+            border-radius: 8px;
+            text-align: center;
+            background-color: rgb(255, 19, 107);
+            color: white;
+            width: 50px;
+            font-size: 12px;
+            font-family: Libre Baskerville;
+        }
+        
+        .edit:hover {
+            background-color: rgb(16, 2, 7);
+        }
+        
+        .delete {
+            padding: .4rem 0;
+            border-radius: 8px;
+            text-align: center;
+            background-color: transparent;
+            color: rgb(255, 19, 107);
+            width: 50px;
+            font-size: 12px;
+            font-family: Libre Baskerville;
+            border-color: white;
+            border-width: 1px;
+        }
+        
+        .delete:hover {
+            cursor: pointer;
+            background-color: white;
+        }
+        
+        .lowercontent {
+            display: flex;
+            justify-content: space-between;
+            font-family: Libre Baskerville;
+        }
+        
+        .pagination {
+            margin-top: 15px;
+            margin-left: 29px;
+        }
+        
+        .pagination button {
+            background-color: rgb(232, 89, 139);
+            color: black;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-family: Libre Baskerville;
+            border: 3px solid rgb(8, 8, 8);
+        }
+        
+        .delete-selected {
+            background-color: rgb(255, 19, 107);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-right: 29px;
+            cursor: pointer;
+            border-radius: 20px;
+            display: flex;
+            align-items: right;
+            font-family: Libre Baskerville;
+            border: 3px solid rgb(82, 79, 79);
+        }
+        
+        .delete-selected:hover {
+            background-color: rgb(232, 89, 139);
+            color: #0a0003;
+        }
+        
+        @media screen and (max-width:1096px) {
+            table,
+            table th,
+            table td {
+                padding: 0.4rem;
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            table,
+            table th,
+            table td {
+                padding: 0.2rem;
+            }
+            .table_header h1 {
+                font-size: large;
+            }
+        }
+        
+        @media screen and (max-width:494px) {
+            table,
+            table th,
+            table td {
+                padding: 0.05rem;
+                font-size: small;
+            }
+            .table_header h1 {
+                font-size: small;
+                margin-left: 0.05rem;
+            }
+            .delete-selected {
+                /* padding: 5px 5px;
+            margin-top: 0.5px;
+            font-size: 2px; */
+                padding: 9px 9px;
+                margin-top: 17.5px;
+                font-size: 10px;
+                margin-left: 18px;
+            }
+            .checkbox-container h2 {
+                font-size: 5px;
+            }
+            .checkbox-container {
+                margin-right: 0.5rem;
+            }
+        }
+        
+        @media screen and (max-width:494px) {
+            table,
+            table th,
+            table td {
+                padding: 0.01rem;
+                font-size: small;
+            }
+        }
